@@ -16,8 +16,8 @@ body {
 
 .card {
 	display: flex;
-	max-width: 500px;
-	height: 400px;
+	max-width: 600px;
+	height: 420px;
 	background-color: hsl(0, 0%, 100%);
 	border-radius: 8px;
 }
@@ -33,7 +33,7 @@ body {
 	flex: 1 1 0%;
 	display: flex;
 	flex-direction: column;
-	padding: 1rem 2rem 1rem 1rem;
+	padding: 1rem 2rem;
 }
 
 .card-desc > span {
@@ -46,6 +46,8 @@ body {
 
 .card-title {
 	font-family: 'Fraunces', serif;
+	font-weight: 700;
+	font-size: 32px;
 	margin: 1rem 0;
 	padding-right: 4rem;
 	color: hsl(212, 21%, 14%);
@@ -55,7 +57,7 @@ body {
 	margin-bottom: 2rem;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
-	word-spacing: 1px;
+	word-spacing: 3px;
 	color: hsl(228, 12%, 48%);
 }
 
@@ -99,4 +101,30 @@ body {
 .btn:hover,
 .btn:focus {
 	background-color: hsl(159, 47%, 17%);
+}
+
+@media (max-width: 700px) {
+	body {
+		align-items: flex-start;
+		height: auto;
+	}
+
+	.card {
+		margin: 3rem 1rem;
+		flex-direction: column;
+		max-width: 500px;
+		height: 100vh;
+	}
+
+	.image-section {
+		background-image: url(./images/image-product-mobile.jpg);
+		background-size: cover;
+		min-height: 35%;
+		border-radius: 8px 8px 0 0;
+	}
+
+	.card-title {
+		font-size: 28px;
+		padding: 1rem 0;
+	}
 }
